@@ -2,3 +2,15 @@ independent-var: visITedResources
 dependent-var: raisedhands
 null-hypothesis: There is no correlation between number of times student raises hand in class and their engagement in educational resources.
 alt-hypothesis: There is correlation between number of times student raises hand in class and their engagement in educational resources.
+dataset-id: DS250
+dataset-url: https://www.kaggle.com/datasets/aljarah/xAPI-Edu-Data
+dataset-file: xAPI-Edu-Data.csv
+columns: |
+  > d <- read.csv("xAPI-Edu-Data.csv")
+  > colnames(d)
+  [1] "gender"                   "NationalITy"              "PlaceofBirth"            
+  [4] "StageID"                  "GradeID"                  "SectionID"               
+  [7] "Topic"                    "Semester"                 "Relation"                
+  [10] "raisedhands"              "VisITedResources"         "AnnouncementsView"       
+  [13] "Discussion"               "ParentAnsweringSurvey"    "ParentschoolSatisfaction"
+  [16] "StudentAbsenceDays"       "Class"
