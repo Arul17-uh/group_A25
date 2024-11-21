@@ -1,4 +1,4 @@
-independent-var: visITedResources
+independent-var: VisITedResources
 dependent-var: raisedhands
 null-hypothesis: There is no correlation between number of times student raises hand in class and their engagement in educational resources.
 alt-hypothesis: There is correlation between number of times student raises hand in class and their engagement in educational resources.
