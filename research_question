@@ -1,5 +1,6 @@
 independent-var: VisITedResources
 dependent-var: raisedhands
+Research Question: Is there a correlation between the number of times a student raises their hand in class and their engagement in educational resources?
 null-hypothesis: There is no correlation between number of times student raises hand in class and their engagement in educational resources.
 alt-hypothesis: There is correlation between number of times student raises hand in class and their engagement in educational resources.
 dataset-id: DS250
