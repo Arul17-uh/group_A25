@@ -17,26 +17,16 @@ scatter_plot <- ggplot(data, aes(x = VisITedResources, y = raisedhands)) +
   theme_minimal()
 # Print scatterplot to the PDF
 print(scatter_plot)
-# Histogram for 'VisITedResources'
-histogram_resources <- ggplot(data, aes(x = VisITedResources)) +
-  geom_histogram(aes(y = after_stat(density)), binwidth = 1, colour = "black", fill = "white") +
-  geom_density(alpha = .2, fill = "#FF6666") +
-  labs(title = "Distribution of Visited Educational Resources",
-       x = "Visited Educational Resources",
-       y = "Density") +
-  theme_minimal()
-# Print histogram for 'VisITedResources' to the PDF
-print(histogram_resources)
-# Histogram for 'raisedhands'
-histogram_hands <- ggplot(data, aes(x = raisedhands)) +
-  geom_histogram(aes(y = after_stat(density)), binwidth = 1, colour = "black", fill = "white") +
-  geom_density(alpha = .2, fill = "#FF6666") +
+# Histogram
+histogram_plot <- ggplot(data, aes(x = raisedhands)) +
+  geom_histogram(aes(y = ..count..), binwidth = 1, colour = "black", fill = "white") +
+  stat_function(fun = function(x) dnorm(x, mean = mean(data$raisedhands), sd = sd(data$raisedhands)) * nrow(data), color = "blue") +
   labs(title = "Distribution of Raised Hands in Class",
        x = "Number of Times Raised Hands",
-       y = "Density") +
+       y = "Frequency") +
   theme_minimal()
-# Print histogram for 'raisedhands' to the PDF
-print(histogram_hands)
+
+print(histogram_plot)
 # Close the PDF device
 dev.off()
 # End of the script
